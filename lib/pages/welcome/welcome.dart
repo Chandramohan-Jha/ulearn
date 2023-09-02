@@ -2,7 +2,7 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:ulearn/pages/notifier/welcome_notifier.dart';
+import 'package:ulearn/pages/welcome/notifier/welcome_notifier.dart';
 import 'package:ulearn/pages/welcome/widgets.dart';
 
 class Welcome extends ConsumerWidget {
