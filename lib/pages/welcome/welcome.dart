@@ -31,6 +31,7 @@ class Welcome extends ConsumerWidget {
                   controller: _pageController,
                   children: [
                     appOnboardingPage(
+                      context,
                       _pageController,
                       index: 1,
                       image: 'reading',
@@ -39,6 +40,7 @@ class Welcome extends ConsumerWidget {
                           'Forget about books, start learning all in one place with Ulearn',
                     ),
                     appOnboardingPage(
+                      context,
                       _pageController,
                       index: 2,
                       image: 'man',
@@ -47,6 +49,7 @@ class Welcome extends ConsumerWidget {
                           "Always stay connected with your tutor and friends let's get started",
                     ),
                     appOnboardingPage(
+                      context,
                       _pageController,
                       index: 3,
                       image: 'boy',

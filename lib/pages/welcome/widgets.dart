@@ -4,6 +4,7 @@ import 'package:ulearn/common/widgets/app_shadow.dart';
 import 'package:ulearn/common/widgets/text_widgets.dart';
 
 Widget appOnboardingPage(
+  BuildContext context,
   PageController controller, {
   required String image,
   required String title,
@@ -25,12 +26,12 @@ Widget appOnboardingPage(
         padding: const EdgeInsets.only(left: 30, right: 30),
         child: text16Normal(text: subTitle),
       ),
-      _nextButton(index, controller),
+      _nextButton(index, controller, context),
     ],
   );
 }
 
-Widget _nextButton(int index, PageController controller) {
+Widget _nextButton(int index, PageController controller, BuildContext context) {
   return GestureDetector(
     onTap: () {
       if (index < 3) {
@@ -39,6 +40,14 @@ Widget _nextButton(int index, PageController controller) {
           duration: const Duration(milliseconds: 300),
           curve: Curves.linear,
         );
+      } else {
+        Navigator.pushNamed(context, '/signIn');
+        // Navigator.push(
+        //   context,
+        //   MaterialPageRoute(
+        //     builder: (BuildContext context) => const SignIn(),
+        //   ),
+        // );
       }
     },
     child: Container(
